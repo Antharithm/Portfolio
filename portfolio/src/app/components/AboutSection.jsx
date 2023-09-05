@@ -8,12 +8,10 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul>
-        <li>Node.js</li>
-        <li>Node.js</li>
-        <li>Node.js</li>
-        <li>Node.js</li>
-        <li>Node.js</li>
+      <ul className="list-disc pl-2">
+        <li>Solidity | EVM</li>
+        <li>JavaScript | Node.js</li>
+        <li>Python | ML</li>
       </ul>
     ),
   },
@@ -21,10 +19,10 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul>
-        <li>UPEN - Blockchain Coding Bootcamp</li>
-        <li>Temple U - Media Studies and A/V Production</li>
-        <li>ADD ALL CERTIFICATES</li>
+      <ul className="list-disc pl-2">
+        <li>University of Pennsylvania | Blockchain Coding Bootcamp</li>
+        <li>Temple University | Media Studies and A/V Production</li>
+        <li>UDEMY Univerity | JavaScript Mastery</li>
       </ul>
     ),
   },
@@ -32,10 +30,10 @@ const TAB_DATA = [
     title: "Expirence",
     id: "expirence",
     content: (
-      <ul>
-        <li>Comcast</li>
-        <li>Tellor</li>
-        <li>Bricks</li>
+      <ul className="list-disc pl-2">
+        <li>Comcast | Data Analytics for Advertisement Traffic and Revenue</li>
+        <li>Tellor | Blockchain Developer</li>
+        <li>Bricks | Blockchain Developer</li>
       </ul>
     ),
   },
@@ -60,7 +58,7 @@ const AboutSection = () => {
           width={500}
           height={500}
         />
-        <div>
+        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
             Fullstack software developer specializing in Solidity, Python and
@@ -70,7 +68,7 @@ const AboutSection = () => {
             developing, testing and deploying smart contracts across EVM
             compatible networks for my clients.
           </p>
-          <div className="flex flex-row mt-8">
+          <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
