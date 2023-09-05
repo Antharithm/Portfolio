@@ -12,7 +12,7 @@ const HeroSection = () => {
             Hello, I'm{" "}
           </span>{" "}
           <br></br>
-          <TypeAnimation
+          {/* <TypeAnimation
             sequence={[
               "Anthony",
               3000,
@@ -33,7 +33,7 @@ const HeroSection = () => {
               color: "#50fd9a",
             }}
             repeat={Infinity}
-          />
+          /> */}
         </h1>
         <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
           I am a Fullstack Web Developer with experience building applications
