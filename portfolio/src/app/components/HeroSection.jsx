@@ -1,8 +1,10 @@
-"use client";
+// "use client";
 import React from "react";
 import Image from "next/image";
 // Components
 import { TypeAnimation } from "react-type-animation";
+
+// FOR SOME REASON THE TYPEANIMATIONS NEEDS TO BE TURNED OFF WHEN EDITING THE CODE B/C IT DOESNT UPDATE WHEN IT'S APPLIED - COMMENT IT OUT FOR NOW
 
 const HeroSection = () => {
   return (
@@ -14,7 +16,7 @@ const HeroSection = () => {
               Hello, I&apos;m{" "}
             </span>
             <br></br>
-            <TypeAnimation
+            {/* <TypeAnimation
               sequence={[
                 "Anthony",
                 3000,
@@ -24,23 +26,31 @@ const HeroSection = () => {
                 1000,
                 "UI/UX Designer.",
                 1000,
+                "Musician.",
+                2000,
               ]}
               wrapper="span"
               speed={50}
-              style={{ fontSize: "1em", display: "inline-block", color: "#50fd9a" }}
+              // style={{
+              //   fontSize: "1em",
+              //   display: "inline-block",
+              //   color: "#50fd9a",
+              // }}
               repeat={Infinity}
-            />
+            /> */}
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            I am a Full Stack Web Developer with experience in building web and mobile
-            applications using JavaScript, Solidity and Python.
+            I am a Fullstack Web Developer with experience building applications
+            for the web, mobile and EVM compatible Blockchains. I leverage my
+            skills and technical abilities in JavaScript, Solidity and Python to
+            create modern and creative user experiences for my clients.
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#50fd9a] hover:bg-slate-600 text-white border border-gray-600">
               Hire Me
             </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-gray-300 hover:bg-gray-500 text-white mt-3">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#50fd9a] hover:bg-gray-500 text-white mt-3">
+              <span className="block bg-[#121212] hover:bg-slate-600 rounded-full px-5 py-2">
                 Download CV
               </span>
             </button>
