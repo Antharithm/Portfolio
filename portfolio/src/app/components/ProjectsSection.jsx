@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
+import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
@@ -47,8 +48,11 @@ const projectsData = [
     tag: ["All", "Web"],
   },
 ];
+
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
@@ -59,7 +63,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <>
+    <section ref={ref}>
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
@@ -81,16 +85,18 @@ const ProjectsSection = () => {
         />
       </div>
       <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
+        {filteredProjects.map((project) => (
           <ProjectCard
             key={project.id}
             title={project.title}
             description={project.description}
             imgUrl={project.image}
+            gitUrl={project.gitUrl}
+            previewUrl={project.pre}
           />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
