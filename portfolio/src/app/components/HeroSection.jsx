@@ -2,17 +2,23 @@
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-12 my-4">
-      <div className="col-span-7 place-self-center place-items-center grid lg:place-items-start">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="col-span-7 place-self-center place-items-center grid lg:place-items-start"
+      >
         <h1 className="text-white max-w-2xl mb-4 lg:text-5xl text-4xl font-extrabold">
           <span className="text-transparent bg-clip-text bg-gradient-to-r to-gray-400 from-gray-300">
             Hello, I'm{" "}
           </span>{" "}
           <br></br>
-          {/* <TypeAnimation
+          <TypeAnimation
             sequence={[
               "Anthony",
               3000,
@@ -33,7 +39,7 @@ const HeroSection = () => {
               color: "#50fd9a",
             }}
             repeat={Infinity}
-          /> */}
+          />
         </h1>
         <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
           I am a Fullstack Web Developer with experience building applications
@@ -51,7 +57,7 @@ const HeroSection = () => {
             </span>
           </button>
         </div>
-      </div>
+      </motion.div>
       <div className="col-span-5 place-self-center mt-4 lg:mt-0">
         <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
           <Image
