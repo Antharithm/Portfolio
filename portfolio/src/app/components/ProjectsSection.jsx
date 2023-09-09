@@ -24,7 +24,7 @@ const projectsData = [
   {
     id: 3,
     title: "Goal Setting Mobile App",
-    description: "React Native mobile app for setting goals",
+    description: "React Native mobile app for setting daily goals",
     image: "/images/projects/goalapp.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/Antharithm/dailyGoals-mobile-app",
@@ -32,7 +32,7 @@ const projectsData = [
   {
     id: 4,
     title: "AWS Cluster",
-    description: "The Power of the Cloud and Unsupervised Machine Learning",
+    description: "Cloud computing and Machine Learning",
     image: "/images/projects/awsCluster.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Antharithm/AWS-ClusterCrypto",
