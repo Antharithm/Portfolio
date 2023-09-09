@@ -9,9 +9,13 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Solidity | EVM</li>
-        <li>JavaScript | Node.js</li>
-        <li>Python | ML</li>
+        <li>Node.js</li>
+        <li>JavaScript</li>
+        <li>Solidity</li>
+        <li>React Native</li>
+        <li>React.JS</li>
+        <li>Ethers.JS</li>
+        <li>Hardhat</li>
       </ul>
     ),
   },
@@ -50,10 +54,10 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white">
+    <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
-          src="/images/bgCover.png"
+          src="/images/bgimagev2.png"
           alt="/images/AntharithmAV8.png"
           width={500}
           height={500}
@@ -61,12 +65,12 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            Fullstack software developer specializing in Solidity, Python and
-            JavaScript programming languages. Experienced Blockchain Architect
-            with proficient coding skills, leveraging development tools such as
-            Ethers.js, React.js, Oracles and Node providers. Fully capable of
-            developing, testing and deploying smart contracts across EVM
-            compatible networks for my clients.
+            I am a full stack web developer with a passion for creating
+            interactive and responsive web applications. I have experience
+            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
+            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
+            looking to expand my knowledge and skill set. I am a team player and
+            I am excited to work with others to create amazing applications.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
